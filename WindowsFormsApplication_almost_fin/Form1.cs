@@ -218,9 +218,7 @@ namespace WindowsFormsApplication_almost_fin
         }
 
         //用CHECK BOX 和鍵盤的852處理定力
-
-
-
+        
         
         //水平推力的量值
         private void trackBar2_Scroll(object sender, EventArgs e)
