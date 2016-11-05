@@ -216,12 +216,7 @@ namespace WindowsFormsApplication_almost_fin
                 vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
              }
         }
-
-        //用CHECK BOX 和鍵盤的852處理定力
-        //一次推以50為準
-
-        
-        
+                
         //水平推力的量值
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
@@ -240,13 +235,79 @@ namespace WindowsFormsApplication_almost_fin
             Process.Start(@"C:\Users\user\Desktop\RCControl\Remote Camera Control");
         }
 
+        //歸零
         private void button4_Click(object sender, EventArgs e)
         {
             var_z_trackBar1.Value = 0;
             z_power_handle = var_z_trackBar1.Value.ToString();
             port.WriteLine(xy_solar + "," + x_power_handle + "," + z_power_handle);
             vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
+        }
 
+        //半速下潛
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var_z_trackBar1.Value = 200;
+            z_power_handle = var_z_trackBar1.Value.ToString();
+            port.WriteLine(xy_solar + "," + x_power_handle + "," + z_power_handle);
+            vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
+        }
+
+        //半速上浮
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var_z_trackBar1.Value = -200;
+            z_power_handle = var_z_trackBar1.Value.ToString();
+            port.WriteLine(xy_solar + "," + x_power_handle + "," + z_power_handle);
+            vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
+        }
+
+        //水平全速
+        private void button7_Click(object sender, EventArgs e)
+        {
+            var_x_trackBar2.Value = 250;
+            x_power_handle = var_x_trackBar2.Value.ToString();
+            port.WriteLine(xy_solar + "," + x_power_handle + "," + z_power_handle);
+            vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
+        }
+
+        //水平3/4速
+        private void button8_Click(object sender, EventArgs e)
+        {
+            var_x_trackBar2.Value = 200;
+            x_power_handle = var_x_trackBar2.Value.ToString();
+            port.WriteLine(xy_solar + "," + x_power_handle + "," + z_power_handle);
+            vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
+        }
+
+        //水平1/2速
+        private void button9_Click(object sender, EventArgs e)
+        {
+            var_x_trackBar2.Value = 130;
+            x_power_handle = var_x_trackBar2.Value.ToString();
+            port.WriteLine(xy_solar + "," + x_power_handle + "," + z_power_handle);
+            vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
+        }
+
+        //穩定群
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            button10.Enabled = true;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            button10.Enabled = true;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            var_z_trackBar1.Value = Convert.ToInt32(textBox1.Text);
+            z_power_handle = var_z_trackBar1.Value.ToString();
+            var_x_trackBar2.Value = Convert.ToInt32(textBox2.Text);
+            x_power_handle = var_x_trackBar2.Value.ToString();
+            port.WriteLine(xy_solar + "," + x_power_handle + "," + z_power_handle);
+            vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
         }
     }
 }
