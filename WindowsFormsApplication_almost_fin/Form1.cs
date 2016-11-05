@@ -219,6 +219,7 @@ namespace WindowsFormsApplication_almost_fin
 
         //用CHECK BOX 和鍵盤的852處理定力
         //一次推以50為準
+
         
         
         //水平推力的量值
