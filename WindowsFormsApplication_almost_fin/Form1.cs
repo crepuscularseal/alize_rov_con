@@ -211,7 +211,7 @@ namespace WindowsFormsApplication_almost_fin
         {
             if(port.IsOpen)
             {
-                z_power_handle = var_z_trackBar1.Value.ToString();
+                z_power_handle = (var_z_trackBar1.Value*50).ToString();
                 port.WriteLine(xy_solar+","+x_power_handle+","+ z_power_handle);
                 vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
              }
@@ -247,8 +247,8 @@ namespace WindowsFormsApplication_almost_fin
         //半速下潛
         private void button5_Click(object sender, EventArgs e)
         {
-            var_z_trackBar1.Value = 200;
-            z_power_handle = var_z_trackBar1.Value.ToString();
+            var_z_trackBar1.Value = 3;
+            z_power_handle = (var_z_trackBar1.Value*50).ToString();
             port.WriteLine(xy_solar + "," + x_power_handle + "," + z_power_handle);
             vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
         }
@@ -256,8 +256,8 @@ namespace WindowsFormsApplication_almost_fin
         //半速上浮
         private void button6_Click(object sender, EventArgs e)
         {
-            var_z_trackBar1.Value = -200;
-            z_power_handle = var_z_trackBar1.Value.ToString();
+            var_z_trackBar1.Value = -3;
+            z_power_handle = (var_z_trackBar1.Value*50).ToString();
             port.WriteLine(xy_solar + "," + x_power_handle + "," + z_power_handle);
             vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
         }
@@ -302,12 +302,15 @@ namespace WindowsFormsApplication_almost_fin
 
         private void button10_Click(object sender, EventArgs e)
         {
-            var_z_trackBar1.Value = Convert.ToInt32(textBox1.Text);
-            z_power_handle = var_z_trackBar1.Value.ToString();
-            var_x_trackBar2.Value = Convert.ToInt32(textBox2.Text);
+            var_z_trackBar1.Value = Convert.ToInt32(textBox2.Text)/50;
+            z_power_handle = (var_z_trackBar1.Value*50).ToString();
+            var_x_trackBar2.Value = Convert.ToInt32(textBox1.Text);
             x_power_handle = var_x_trackBar2.Value.ToString();
+            
+            vertical_now.Text = "vertical =" + (var_z_trackBar1.Value*50).ToString();
+            horizon_now.Text = "horizon =" + var_x_trackBar2.Value.ToString();
+
             port.WriteLine(xy_solar + "," + x_power_handle + "," + z_power_handle);
-            vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
         }
     }
 }

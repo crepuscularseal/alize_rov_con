@@ -53,10 +53,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -64,7 +65,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.var_z_trackBar1)).BeginInit();
@@ -291,14 +291,12 @@
             // var_z_trackBar1
             // 
             this.var_z_trackBar1.Location = new System.Drawing.Point(23, 34);
-            this.var_z_trackBar1.Maximum = 255;
-            this.var_z_trackBar1.Minimum = -255;
+            this.var_z_trackBar1.Maximum = 5;
+            this.var_z_trackBar1.Minimum = -5;
             this.var_z_trackBar1.Name = "var_z_trackBar1";
             this.var_z_trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.var_z_trackBar1.Size = new System.Drawing.Size(45, 314);
-            this.var_z_trackBar1.SmallChange = 20;
             this.var_z_trackBar1.TabIndex = 18;
-            this.var_z_trackBar1.TickFrequency = 40;
             this.var_z_trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // var_x_trackBar2
@@ -347,21 +345,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "穩定時數值";
             // 
-            // textBox1
+            // button10
             // 
-            this.textBox1.Location = new System.Drawing.Point(89, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(57, 22);
-            this.textBox1.TabIndex = 25;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.button10.Location = new System.Drawing.Point(24, 91);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(111, 22);
+            this.button10.TabIndex = 29;
+            this.button10.Text = "穩定吧!孩子!";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // textBox2
+            // label6
             // 
-            this.textBox2.Location = new System.Drawing.Point(89, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(56, 22);
-            this.textBox2.TabIndex = 26;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 12);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "垂直穩定值：";
             // 
             // label3
             // 
@@ -372,14 +373,21 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "水平穩定值：";
             // 
-            // label6
+            // textBox2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 65);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 12);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "垂直穩定值：";
+            this.textBox2.Location = new System.Drawing.Point(89, 62);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(56, 22);
+            this.textBox2.TabIndex = 26;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(89, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(57, 22);
+            this.textBox1.TabIndex = 25;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button8
             // 
@@ -462,16 +470,6 @@
             this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "groupBox4";
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(24, 91);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(111, 22);
-            this.button10.TabIndex = 29;
-            this.button10.Text = "穩定吧!孩子!";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // Form1
             // 
