@@ -268,7 +268,7 @@ namespace WindowsFormsApplication_almost_fin
             var_x_trackBar2.Value = 250;
             x_power_handle = var_x_trackBar2.Value.ToString();
             port.WriteLine(xy_solar + "," + x_power_handle + "," + z_power_handle);
-            vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
+            horizon_now.Text = "horizon =" + var_x_trackBar2.Value.ToString();
         }
 
         //水平3/4速
@@ -277,7 +277,7 @@ namespace WindowsFormsApplication_almost_fin
             var_x_trackBar2.Value = 200;
             x_power_handle = var_x_trackBar2.Value.ToString();
             port.WriteLine(xy_solar + "," + x_power_handle + "," + z_power_handle);
-            vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
+            horizon_now.Text = "horizon =" + var_x_trackBar2.Value.ToString();
         }
 
         //水平1/2速
@@ -286,7 +286,7 @@ namespace WindowsFormsApplication_almost_fin
             var_x_trackBar2.Value = 130;
             x_power_handle = var_x_trackBar2.Value.ToString();
             port.WriteLine(xy_solar + "," + x_power_handle + "," + z_power_handle);
-            vertical_now.Text = "vertical =" + var_z_trackBar1.Value.ToString();
+            horizon_now.Text = "horizon =" + var_x_trackBar2.Value.ToString();
         }
 
         //穩定群
